@@ -1,0 +1,5413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Thespian</name></assembly>
+<members>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.Actor.DefaultPrimaryProtocolFactory(Nessos.Thespian.IPrimaryProtocolFactory)">
+<summary>
+ Gets or sets the default primary protocol used by actors.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Actor.Log">
+<summary>
+ Actor event observable
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Actor.DefaultPrimaryProtocolFactory">
+<summary>
+ Gets or sets the default primary protocol used by actors.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Actor.Stop">
+<summary>
+ Stops given actor instance.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Actor.Start">
+<summary>
+ Starts given actor instance.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Actor.LogEvent``1(Nessos.Thespian.Logging.LogLevel,``0)">
+ <summary>
+     Trigger a new event for given actor.
+ </summary>
+ <param name="logLevel">Log level.</param>
+ <param name="event">event value.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Actor">
+<summary>
+ Represents an untyped locally executing actor instance.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.ActorConfigurationException">
+ <summary>
+     Raised on invalid actor configuration
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.ActorFailedException">
+ <summary>
+     Raised when attempting to post to a failed actor.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.ActorId.Name">
+<summary>
+ Actor Name
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorId.CompareTo(Nessos.Thespian.ActorId)">
+<summary>
+ ActorId comparison implementation
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.ActorId">
+ <summary>
+     Abstract unique actor Identifier
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.ActorInactiveException">
+ <summary>
+     Raised when attempting to post to inactive actor.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.ActorRef.Protocols">
+<summary>
+ Gets a collection of all protocol names actor is published to.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.ActorRef.Name">
+<summary>
+ Actor name
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.ActorRef.MessageType">
+<summary>
+ Gets the type of messages received by this actor.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.ActorRef.Id">
+<summary>
+ Actor identifier
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ActorRef.TryPostWithReplyUntyped(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IReplyChannel{System.Object},System.Object},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>
+     Asynchronously post-with-reply untyped message to actor. Returns 'None' on timeout.
+ </summary>
+ <param name="timeout">Timeout in milliseconds.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef.SerializationExtractor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+ <summary>
+     Overrideable serialization function used by ActorRef.
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.ActorRef.PostWithReplyUntyped(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IReplyChannel{System.Object},System.Object},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>
+     Asynchronously post-with-reply untyped message to actor.
+ </summary>
+ <param name="messageBuilder">Untyped message builder.</param>
+ <param name="timeout">Timeout in milliseconds.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorRef.PostUntyped(System.Object)">
+ <summary>
+     Post an untyped message to actor.
+ </summary>
+ <param name="message">Untyped message.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef.AsyncPostUntyped(System.Object)">
+ <summary>
+     Asynchronously post an untyped message to actor.
+ </summary>
+ <param name="message">Untyped message.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef.#ctor(System.String,System.Type,System.Collections.Generic.IEnumerable{System.String})">
+ <summary>
+     construct a new ActorRef instance.
+ </summary>
+ <param name="name">actor name.</param>
+ <param name="messageType">message type read by the actor.</param>
+ <param name="protocols">collection of protocol names used by the actor.</param>
+</member>
+<member name="T:Nessos.Thespian.ActorRef">
+<summary>
+ Actor reference base type
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.ActorRef`1.ProtocolFactories">
+<summary>
+ Gets a collection of all protocol factories published to 
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.ActorRef`1.Item(System.String)">
+<summary>
+ Actor protocol indexer
+</summary>
+</member>
+<member name="P:Nessos.Thespian.ActorRef`1.IsCollocated">
+<summary>
+ Returns true if pointing to a collocted actor instance.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.TryPostWithReply``1(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IReplyChannel{``0},`0},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>
+     Asynchronously post-with-reply to recipient actor.
+     Workflow suspends until a reply is sent back.
+     Returns 'None' if timeout is reached.
+ </summary>
+ <param name="messageBuilder">Reply channel message builder.</param>
+ <param name="timeout">Timeout in milliseconds.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.TryGetProtocolSpecific(System.String)">
+ <summary>
+     Try getting protocol-specific ActorRef by protocol name.
+ </summary>
+ <param name="protoname">Protocol name to use.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.TryGetActorIdSpecific(Nessos.Thespian.ActorId)">
+ <summary>
+     Try getting protocol-specific ActorRef by actor id.
+ </summary>
+ <param name="actorId">Actor id.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.ProtocolFilter(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IProtocolFactory,System.Boolean})">
+ <summary>
+     Creates a new ActorRef instance containing only protocols satisfying provided predicate.
+ </summary>
+ <param name="filterF">filtering predicate.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.PostWithReply``1(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IReplyChannel{``0},`0},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>
+     Asynchronously post-with-reply to recipient actor.
+     Workflow suspends until a reply is sent back.
+ </summary>
+ <param name="messageBuilder">Reply channel message builder.</param>
+ <param name="timeout">Timeout in milliseconds.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.Post(`0)">
+ <summary>
+     Synchronously post a message to recipient actor.
+ </summary>
+ <param name="message">Posted message.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.GetUris">
+<summary>
+ Gets a collection of URIs corresponding to all published protocols.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.CompareTo(Nessos.Thespian.ActorRef{`0})">
+ <summary>
+     Abstract encapsulated comparison semantics for given ActorRef.
+ </summary>
+ <param name="other">comparand.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.AsyncPost(`0)">
+ <summary>
+     Asynchronously post a message to recipient actor.
+ </summary>
+ <param name="message">Posted message.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.#ctor(Nessos.Thespian.ActorRef{`0})">
+ <summary>
+     Creates an ActorRef clone.
+ </summary>
+ <param name="clone">ActorRef to be cloned.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorRef`1.#ctor(System.String,Nessos.Thespian.IProtocolClient{`0}[])">
+ <summary>
+     Creates a new ActorRef out of name and protocol list.
+ </summary>
+ <param name="name">Actor name.</param>
+ <param name="protocols">Protocols published to actor.</param>
+</member>
+<member name="T:Nessos.Thespian.ActorRef`1">
+<summary>
+ Typed actor reference
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.Actor`1.Ref">
+<summary>
+ Gets a reference to given actor instance.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Actor`1.Protocols">
+<summary>
+ Protocol server instances used by the actor
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Actor`1.PendingMessages">
+<summary>
+ Return the number of messages pending processing by actor instance.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Actor`1.Name">
+<summary>
+ Actor name
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.Actor`1.LinkedActors">
+<summary>
+ Actors linked to the given actor instance.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Actor`1.Behavior">
+<summary>
+ Asynchronous, tail-recursive loop behaviour used by actor.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Actor`1.TryReceive(Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>
+     Asynchronously dequeue a message from actor inbox. Return 'None' on timeout.
+ </summary>
+ <param name="timeout">Timeout in milliseconds. Defaults to infinite.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Actor`1.Rename(System.String)">
+ <summary>
+     Creates a renamed copy of given actor.
+ </summary>
+ <param name="newName">new name for given actor.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Actor`1.Receive(Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>
+     Asynchronously dequeue a message from actor inbox.
+ </summary>
+ <param name="timeout">Timeout in milliseconds. Defaults to infinite.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Actor`1.Publish``2(``0)">
+ <summary>
+     Publishes given actor to collection of protocol factories.
+ </summary>
+ <param name="protocolFactories">Protocol factories to be published to.</param>
+</member>
+<member name="M:Nessos.Thespian.Actor`1.Publish(Nessos.Thespian.IProtocolServer{`0}[])">
+ <summary>
+     Publishes given actor to collection of protocol server instances.
+ </summary>
+ <param name="protocolServers">Protocol servers to be published to.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Actor`1.#ctor(Nessos.Thespian.Actor{`0})">
+ <summary>
+     Clones an actor behaviour from a given instance.
+ </summary>
+ <param name="otherActor">actor to be cloned from.</param>
+</member>
+<member name="M:Nessos.Thespian.Actor`1.#ctor(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.Actor{`0},Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpOption{Nessos.Thespian.IPrimaryProtocolFactory},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{Nessos.Thespian.Actor}})">
+ <summary>
+     Creates a new typed actor instance.
+ </summary>
+ <param name="behavior">Asynchronous, tail-recursive actor behaviour workflow.</param>
+ <param name="primaryProtocolFactory">Protocol factory used primarily by the actor.</param>
+ <param name="linkedActors">Actors linked to the given instance.</param>
+</member>
+<member name="M:Nessos.Thespian.Actor`1.#ctor(System.String,Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.Actor{`0},Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpOption{Nessos.Thespian.IPrimaryProtocolFactory},Microsoft.FSharp.Core.FSharpOption{System.Collections.Generic.IEnumerable{Nessos.Thespian.Actor}})">
+ <summary>
+     Creates a new typed actor instance.
+ </summary>
+ <param name="name">Actor name.</param>
+ <param name="behavior">Asynchronous, tail-recursive actor behaviour workflow.</param>
+ <param name="primaryProtocolFactory">Protocol factory used primarily by the actor.</param>
+ <param name="linkedActors">Actors linked to the given instance.</param>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Actor`1">
+<summary>
+ Represents a typed locally executing actor instance.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.CommunicationException">
+ <summary>
+     Raised on Thespian protocol communication failure.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.CommunicationTimeoutException.TimeoutType">
+<summary>
+ Type of timeout that caused the exception
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.CommunicationTimeoutException">
+ <summary>
+     Raised on protocol communication timeouts.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="F:Nessos.Thespian.Default.ReplyReceiveTimeout@">
+<summary>
+ Gets or sets the default reply channel timeout interval.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Default.ReplyReceiveTimeout(System.Int32)">
+<summary>
+ Gets or sets the default reply channel timeout interval.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Default.ReplyReceiveTimeout">
+<summary>
+ Gets or sets the default reply channel timeout interval.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Default">
+<summary>
+ ActorRef defaults
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.DeliveryException">
+ <summary>
+     Raised on failed delivery.
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.IPrimaryProtocolFactory.Create``1(System.String)">
+ <summary>
+     Create a primary actor protocol server instance.
+ </summary>
+ <param name="actorName">Name of actor bound to server instance.</param>
+</member>
+<member name="T:Nessos.Thespian.IPrimaryProtocolFactory">
+ <summary>
+     Abstract primary protocol server factory.
+ </summary>
+</member>
+<member name="P:Nessos.Thespian.IPrimaryProtocolServer`1.PendingMessages">
+<summary>
+ Returns the number of messages pending processing by the actor.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.IPrimaryProtocolServer`1.TryReceive(System.Int32)">
+ <summary>
+     Asynchronously await the first arrived message.
+ </summary>
+ <param name="timeoutMilliseconds">timeout in milliseconds.</param>
+</member>
+<member name="M:Nessos.Thespian.IPrimaryProtocolServer`1.Start(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}})">
+ <summary>
+     Start actor execution with given behavior.
+ </summary>
+ <param name="behaviour">Asynchronous actor implementation workflow.</param>
+</member>
+<member name="M:Nessos.Thespian.IPrimaryProtocolServer`1.Receive(System.Int32)">
+ <summary>
+     Asynchronously await the first arrived message.
+ </summary>
+ <param name="timeoutMilliseconds">timeout in milliseconds.</param>
+</member>
+<member name="M:Nessos.Thespian.IPrimaryProtocolServer`1.CreateInstance(System.String)">
+<summary>
+ Create a new instance of the protocol
+</summary>
+</member>
+<member name="T:Nessos.Thespian.IPrimaryProtocolServer`1">
+<summary>
+ Primary protocol implementation used by actor
+ All messages received by secondary actor protocols
+ must be forwarded to its unique primary protocol.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolClient`1.Uri">
+<summary>
+ Recipient actor uri.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolClient`1.ProtocolName">
+<summary>
+ Protocol name for client
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolClient`1.Factory">
+<summary>
+ Protocol factory for current implementation.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolClient`1.ActorId">
+<summary>
+ Recipient actor identifier.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.IProtocolClient`1.TryPostWithReply``1(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IReplyChannel{``0},`0},System.Int32)">
+ <summary>
+     Asynchronously post-with-reply to recipient actor.
+     Computation blocks until recipient responds to given reply channel.
+ </summary>
+ <param name="messageBuilder">Message builder for given reply channel.</param>
+ <param name="timeoutMilliseconds">Timeout in milliseconds.</param>
+</member>
+<member name="M:Nessos.Thespian.IProtocolClient`1.PostWithReply``1(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IReplyChannel{``0},`0},System.Int32)">
+ <summary>
+     Synchronously post-with-reply to recipient actor.
+     Computation blocks until recipient responds to given reply channel.
+ </summary>
+ <param name="messageBuilder">Message builder for given reply channel.</param>
+ <param name="timeoutMilliseconds">Timeout in milliseconds.</param>
+</member>
+<member name="M:Nessos.Thespian.IProtocolClient`1.Post(`0)">
+ <summary>
+     Synchronously post message to recipient actor.
+ </summary>
+ <param name="message">message to be posted.</param>
+</member>
+<member name="M:Nessos.Thespian.IProtocolClient`1.AsyncPost(`0)">
+ <summary>
+     Asynchronously post message to recipient actor.
+ </summary>
+ <param name="message">message to be posted.</param>
+</member>
+<member name="T:Nessos.Thespian.IProtocolClient`1">
+<summary>
+ Abstract actor protocol client. 
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolFactory.ProtocolName">
+<summary>
+ Protocol implementation name.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.IProtocolFactory.CreateServerInstance``1(System.String,Nessos.Thespian.ActorRef{``0})">
+ <summary>
+      Create an actor protocol server instance.
+ </summary>
+ <param name="actorName">Name of actor bound to server instance.</param>
+ <param name="actorRef">Actor reference bound to server instance.</param>
+</member>
+<member name="M:Nessos.Thespian.IProtocolFactory.CreateClientInstance``1(System.String)">
+ <summary>
+      Create an actor protocol client instance.
+ </summary>
+ <param name="actorName">Name of actor to connect to.</param>
+</member>
+<member name="T:Nessos.Thespian.IProtocolFactory">
+<summary>
+ Abstract actor protocol factory.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolServer`1.ProtocolName">
+<summary>
+ Protocol name of server.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolServer`1.Log">
+<summary>
+ Actor event log.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolServer`1.Client">
+<summary>
+ Local client instance for current protocol.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IProtocolServer`1.ActorId">
+<summary>
+ Recipient actor identifier.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.IProtocolServer`1.Stop">
+<summary>
+ Stops the actor protocol server.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.IProtocolServer`1.Start">
+<summary>
+ Starts the actor protocol server.
+</summary>
+</member>
+<member name="T:Nessos.Thespian.IProtocolServer`1">
+<summary>
+ Abstract actor protocol server.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IReplyChannel.Timeout(System.Int32)">
+<summary>
+ Gets or sets the timeout for reply in milliseconds
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IReplyChannel.Timeout">
+<summary>
+ Gets or sets the timeout for reply in milliseconds
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IReplyChannel.Protocol">
+<summary>
+ Protocol name for given reply channel
+</summary>
+</member>
+<member name="M:Nessos.Thespian.IReplyChannel.AsyncReplyUntyped(Nessos.Thespian.Reply{System.Object})">
+ <summary>
+     Asynchronously send a reply to the channel.
+ </summary>
+ <param name="reply">Untyped reply value.</param>
+</member>
+<member name="T:Nessos.Thespian.IReplyChannel">
+<summary>
+ Abstract type used in actor APIs that support replies.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.IReplyChannelFactory.Protocol">
+<summary>
+ Protocol implementation name.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.IReplyChannelFactory.IsForeignChannel``1(Nessos.Thespian.IReplyChannel{``0})">
+ <summary>
+     Decides whether given reply channel is compatible
+     with given reply channel protocol implementation.
+ </summary>
+ <param name="rc">Reply channel to be examined.</param>
+</member>
+<member name="M:Nessos.Thespian.IReplyChannelFactory.Create``1">
+<summary>
+ Initializes a new reply channel for given implementation.
+</summary>
+</member>
+<member name="T:Nessos.Thespian.IReplyChannelFactory">
+<summary>
+ Reply channel factory abstraction
+</summary>
+</member>
+<member name="M:Nessos.Thespian.IReplyChannel`1.AsyncReply(Nessos.Thespian.Reply{`0})">
+ <summary>
+     Asynchronously send a reply to the channel.
+ </summary>
+ <param name="reply">Untyped reply value.</param>
+</member>
+<member name="T:Nessos.Thespian.IReplyChannel`1">
+<summary>
+ Abstract type used in actor APIs that support replies.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.MessageHandlingException">
+ <summary>
+     Raised when message reply channels are passed exceptions.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.MessageSerializationContext.Serializer">
+<summary>
+ Serializer implementation used for context.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.MessageSerializationContext.ReplyProtocol">
+<summary>
+ ReplyChannel protocol name
+</summary>
+</member>
+<member name="P:Nessos.Thespian.MessageSerializationContext.ReplyChannelOverrides">
+<summary>
+ Gets the currently registered reply channel overrides
+</summary>
+</member>
+<member name="M:Nessos.Thespian.MessageSerializationContext.GetStreamingContext">
+<summary>
+ Wraps this instance as a StreamingContext value.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.MessageSerializationContext.ForeignFilter``1(Nessos.Thespian.IReplyChannel{``0})">
+ <summary>
+     Decides if given reply channel requires patching.
+ </summary>
+ <param name="rc">reply channel to be examined.</param>
+</member>
+<member name="M:Nessos.Thespian.MessageSerializationContext.CreateReplyChannelOverride``1">
+<summary>
+ Creates a fresh reply channel for native protocol implementation.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.MessageSerializationContext.AddReplyChannelOverride(Nessos.Thespian.IReplyChannel,Nessos.Thespian.IReplyChannel)">
+ <summary>
+     Appends new reply channel override to the context state.
+ </summary>
+ <param name="foreignReplyChannel">Foreign reply channel.</param>
+ <param name="nativeReplyChannel">Native reply channel.</param>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.MessageSerializationContext">
+<summary>
+ StreamingContext payload used for gathering reply channel metadata in serialized messages
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Protocols">
+<summary>
+ Actor protocol factory methods
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Reply">
+<summary>
+ Represents an untyped reply given to a channel
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ReplyChannelProxy`1.#ctor(Nessos.Thespian.IReplyChannel{`0})">
+ <summary>
+     Create a new proxy for given reply channel.
+ </summary>
+ <param name="realReplyChannel">source reply channel.</param>
+</member>
+<member name="T:Nessos.Thespian.ReplyChannelProxy`1">
+<summary>
+ Used for proxying reply channels
+</summary>
+</member>
+<member name="T:Nessos.Thespian.Reply`1.Exn">
+<summary>
+ Exceptional reply
+</summary>
+</member>
+<member name="T:Nessos.Thespian.Reply`1.Value">
+<summary>
+ Successful reply
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Reply`1.GetValue(Microsoft.FSharp.Core.FSharpOption{System.Boolean})">
+ <summary>
+     Gets the contained value of given reply.
+ </summary>
+ <param name="preserveStackTrace">Keep remote stack trace if exception. Defaults to true.</param>
+</member>
+<member name="T:Nessos.Thespian.Reply`1">
+<summary>
+ Represents a reply given to a channel
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.SerializationOperation">
+<summary>
+ Serialization operations enumeration.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.ThespianException.ActorName">
+<summary>
+ Actor name that raised the exception.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.ThespianException.ActorId">
+<summary>
+ Actor id that raised the exception.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.ThespianException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+ <summary>
+     ISerializable ThespianException constructor.
+ </summary>
+ <param name="info">Serialization info.</param>
+ <param name="context">Streaming context.</param>
+</member>
+<member name="M:Nessos.Thespian.ThespianException.#ctor(System.String,System.Exception)">
+ <summary>
+     Constructs a new ThespianException with no actor name.
+ </summary>
+ <param name="message"></param>
+ <param name="innerException"></param>
+</member>
+<member name="M:Nessos.Thespian.ThespianException.#ctor(System.String)">
+ <summary>
+     Constructs a new ThespianException with no actor name.
+ </summary>
+ <param name="message"></param>
+</member>
+<member name="M:Nessos.Thespian.ThespianException.#ctor(System.String,Nessos.Thespian.ActorId,System.Exception)">
+ <summary>
+     Construct a new Exception by ActorId.
+ </summary>
+ <param name="message">Exception message.</param>
+ <param name="actorId">Actor id.</param>
+ <param name="innerException">Inner exception.</param>
+</member>
+<member name="M:Nessos.Thespian.ThespianException.#ctor(System.String,System.String,System.Exception)">
+ <summary>
+     Constructs a new ThespianException.
+ </summary>
+ <param name="message">Exception message.</param>
+ <param name="actorName">Actor name.</param>
+ <param name="innerException">Inner exception.</param>
+</member>
+<member name="M:Nessos.Thespian.ThespianException.#ctor(System.String,Nessos.Thespian.ActorId)">
+ <summary>
+     Constructs a new ThespianException by ActorId.
+ </summary>
+ <param name="message">Exception message.</param>
+ <param name="actorId">Actor Id.</param>
+</member>
+<member name="M:Nessos.Thespian.ThespianException.#ctor(System.String,System.String)">
+ <summary>
+     Constructs a new ThespianException.
+ </summary>
+ <param name="message">Exception message.</param>
+ <param name="actorName">Actor name.</param>
+</member>
+<member name="T:Nessos.Thespian.ThespianException">
+ <summary>
+     Base Thespian exception
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.ThespianSerializationException">
+<summary>
+ Serialization exception raised by Thespian
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.TimeoutType">
+<summary>
+ Timeout type enumeration.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.UnknownRecipientException">
+ <summary>
+     Raised on unknown recipient actor.
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.ActorExtensions.Actor.LogError(Nessos.Thespian.Actor,System.Exception)">
+ <summary>
+     Log exception event.
+ </summary>
+ <param name="exn">exception value.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorExtensions.Actor.LogWarning``1(Nessos.Thespian.Actor,``0)">
+ <summary>
+     Log warning event.
+ </summary>
+ <param name="warning">warning value.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorExtensions.Actor.LogInfo``1(Nessos.Thespian.Actor,``0)">
+ <summary>
+     Log information event.
+ </summary>
+ <param name="info">info value.</param>
+</member>
+<member name="T:Nessos.Thespian.ActorExtensions">
+<summary>
+ Extension methods for Actor types.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.union``2(Nessos.Thespian.Actor{``0},Nessos.Thespian.Actor{``1})">
+ <summary>
+     Fuse constituent actors into one that accepts union types.
+ </summary>
+ <param name="actor"></param>
+ <param name="actor'"></param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.unbox``1(Nessos.Thespian.Actor{System.Object})">
+ <summary>
+     Creates a new actor that forwards unboxed messages to target.
+ </summary>
+ <param name="actor">Target actor.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.box``1(Nessos.Thespian.Actor{``0})">
+ <summary>
+     Creates a new actor that forwards boxed messages to target.
+ </summary>
+ <param name="actor">Target actor.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.wrapRef``1(Nessos.Thespian.ActorRef{``0})">
+ <summary>
+     Creates a local actor instance that forwards messages to target ActorRef.
+ </summary>
+ <param name="actorRef">Target ActorRef.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.ref``1(Nessos.Thespian.Actor{``0})">
+ <summary>
+     Gets reference to given actor.
+ </summary>
+ <param name="actor">Input actor.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.partition``2(Microsoft.FSharp.Core.FSharpFunc{``0,System.Int32},``1)">
+ <summary>
+     Creates an actor that forwards to target actors according to an indexing function.
+ </summary>
+ <param name="partitionF">Indexing function.</param>
+ <param name="actors">Target actors.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Nessos.Thespian.Actor{``1})">
+ <summary>
+     Creates an actor that maps messages to target actor.
+ </summary>
+ <param name="mapF">Mapping function.</param>
+ <param name="actor">Target actor.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.balance``2(Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{Nessos.Thespian.ActorRef{``0}},Nessos.Thespian.ActorRef{``0}},``1)">
+ <summary>
+     Balance message passing across a collection of actors using a selection function.
+ </summary>
+ <param name="select">Selection function.</param>
+ <param name="actors">Target actors.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.split``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Nessos.Thespian.Actor{``0},Nessos.Thespian.Actor{``0})">
+ <summary>
+     Creates a new actor that passes incoming messages through a choice predicate;
+     successful inputs are passed to the first actor, whereas failed will be passed to
+     the failed actor.
+ </summary>
+ <param name="choiceF">Choice predicate.</param>
+ <param name="actorOnSuccess">Actor to forward message on true.</param>
+ <param name="actorOnFail">Actor to forward message on false.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.broadcast``2(``0)">
+ <summary>
+     Creates a new actor that broadcasts message received to
+     all target actors.
+ </summary>
+ <param name="actors">Target actors.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.filter``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Nessos.Thespian.Actor{``0})">
+ <summary>
+     Creates a new actor that only forwards messages
+     which satisfy given predicate.
+ </summary>
+ <param name="predicate">Predicate function.</param>
+ <param name="actor">Target actor.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.intercept``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}},Nessos.Thespian.Actor{``0})">
+ <summary>
+     Creates a new actor that intercepts messages
+     before forwarding them to the target actor.
+ </summary>
+ <param name="interceptF">Interception behavior.</param>
+ <param name="actor">Target actor.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.start``1(Nessos.Thespian.Actor{``0})">
+ <summary>
+     Starts the given actor instance.
+ </summary>
+ <param name="actor">Actor to be started.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.rename``1(System.String,Nessos.Thespian.Actor{``0})">
+ <summary>
+     Creates a copy of the actor instance with a new name.
+ </summary>
+ <param name="newName">New actor name.</param>
+ <param name="actor">Target actor.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.publish``3(``0,Nessos.Thespian.Actor{``2})">
+ <summary>
+     Publish given actor implementation to provided protocol implementation factories.
+ </summary>
+ <param name="protocolFactories">Protocol factories.</param>
+ <param name="actor">Target actor.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.spawnLinked``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}},``1)">
+ <summary>
+     Wraps an asynchronous reactive workflow into a tail-recursive actor definition.
+ </summary>
+ <param name="reactF">Worfklow that reacts on input messages.</param>
+ <param name="linkedActors">Actors linked to current instance.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.bindLinked``2(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.Actor{``0},Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}},``1)">
+ <summary>
+     Instantiates an asynchronous, tail recursive actor behaviour workflow into an inactive actor instance.
+ </summary>
+ <param name="body">Actor behaviour workflow.</param>
+ <param name="linkedActors">Actors linked to current instance.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.spawn``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}})">
+ <summary>
+     Wraps an asynchronous reactive workflow into a tail-recursive actor definition.
+ </summary>
+ <param name="reactF">Worfklow that reacts on input messages.</param>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.sink``1">
+<summary>
+ Creates a trivial actor that receives a single message and exits.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.empty``1">
+<summary>
+ Creates a trivial actor that exits.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ActorModule.bind``1(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.Actor{``0},Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}})">
+ <summary>
+     Instantiates an asynchronous, tail recursive actor behaviour workflow into an inactive actor instance.
+ </summary>
+ <param name="body">Actor behaviour workflow.</param>
+</member>
+<member name="T:Nessos.Thespian.ActorModule">
+<summary>
+ Collection of actor combinators
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ActorRefModule.empty``1">
+ <summary>
+     Return reference to a new actor that accepts one message and then exits.
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.ActorRefModule.configurationFilter``1(Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IProtocolFactory,System.Boolean},Nessos.Thespian.ActorRef{``0})">
+ <summary>
+     Filters actor ref protocols by predicate.
+ </summary>
+ <param name="filterF">Protocol filtering function.</param>
+ <param name="actorRef">Input ActorRef.</param>
+ <returns>ActorRef with filtered protocol configurations.</returns>
+</member>
+<member name="T:Nessos.Thespian.ActorRefModule">
+<summary>
+ Collection of ActorRef combinators
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Agents.Operators">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Agents.Agent">
+
+</member>
+<member name="M:Nessos.Thespian.Behavior.stateless``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}},Nessos.Thespian.Actor{``0})">
+ <summary>
+     Creates a stateless behaviour workflow out of a message-reactive function.
+ </summary>
+ <param name="reactF">workflow that reacts asynchronously to input message.</param>
+</member>
+<member name="M:Nessos.Thespian.Behavior.stateful``2(``0,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Control.FSharpAsync{``0}}},Nessos.Thespian.Actor{``1})">
+ <summary>
+     Creates a stateful behaviour workflow out of provided components.
+ </summary>
+ <param name="init">Initial state.</param>
+ <param name="behavior">State-updating reactive asynchronous workflow.</param>
+ <param name="self">'This' actor.</param>
+</member>
+<member name="T:Nessos.Thespian.Behavior">
+<summary>
+ Collection of behaviour-based combinators
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.DisposableExtensions">
+
+</member>
+<member name="M:Nessos.Thespian.ExceptionHelpers.|InnerException|_|(System.Exception)">
+<summary>
+ Inner exception active pattern
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ExceptionHelpers.|DeliveryException|_|(System.Exception)">
+<summary>
+ DeliveryException active pattern
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ExceptionHelpers.|UnknownRecipientException|_|(System.Exception)">
+<summary>
+ UnknownRecipientException active pattern
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ExceptionHelpers.|CommunicationException|_|(System.Exception)">
+<summary>
+ CommunicationException active pattern
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ExceptionHelpers.|CommunicationTimeoutException|_|(System.Exception)">
+<summary>
+ CommunicationTimeoutException active pattern
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ExceptionHelpers.|MessageHandlingExceptionRec|_|(System.Exception)">
+<summary>
+ recursively traverses through MessageHandlingExceptions, 
+ retrieving the innermost exception raised by the original actor.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ExceptionHelpers.|MessageHandlingException|_|(System.Exception)">
+<summary>
+ MessageHandlingException active pattern
+</summary>
+</member>
+<member name="T:Nessos.Thespian.ExceptionHelpers">
+<summary>
+ A collection of active patterns for handling Thespian exceptions.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Logging.NullLogger">
+<summary>
+ A logger implementation that does nothing.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Logging.ILogger.Log(System.String,Nessos.Thespian.Logging.LogLevel,System.DateTime)">
+ <summary>
+     Log a new entry.
+ </summary>
+ <param name="message">Log message.</param>
+ <param name="level">Log level.</param>
+ <param name="time">Log time.</param>
+</member>
+<member name="T:Nessos.Thespian.Logging.ILogger">
+<summary>
+ Abstract logger implementation
+</summary>
+</member>
+<member name="T:Nessos.Thespian.Logging.Log">
+<summary>
+ Actor Log event type
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Logging.LogSource">
+<summary>
+ Specifies the log source of a log event.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Logging.LogLevel">
+<summary>
+ LogLevel of a log event.
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Logging.DefaultLogger">
+<summary>
+ Gets or sets the default logger implementation used by Thespian.
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Logging.LogModule.logException(System.Exception,System.String)">
+<summary>
+ Log exception to default logger
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Logging.LogModule.logError(System.String)">
+<summary>
+ Log error to default logger
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Logging.LogModule.logWarning(System.String)">
+<summary>
+ Log warning to default logger
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Logging.LogModule.logInfo(System.String)">
+<summary>
+ Log info to default logger
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Logging.LogModule.logNow(Nessos.Thespian.Logging.LogLevel,System.String)">
+<summary>
+ Log new entry to default logger
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Logging.LogModule.log(System.DateTime,Nessos.Thespian.Logging.LogLevel,System.String)">
+<summary>
+ Log new entry to default logger
+</summary>
+</member>
+<member name="T:Nessos.Thespian.Logging.LogModule">
+<summary>
+ A collection of logging functions that write entries to the default logger.
+</summary>
+</member>
+<member name="T:Nessos.Thespian.Logging">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.MailboxProtocol.MailboxProtocolClient`1">
+<summary>
+ MailboxProcessor protocol client implementation
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.MailboxProtocol.MailboxProtocolServer`1">
+<summary>
+ MailboxProcessor protocol server implementation
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.MailboxProtocol.MailboxReplyChannel`1">
+<summary>
+ MailboxProcessor protocol ReplyChannel
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.MailboxProtocol.MailboxActorId">
+<summary>
+ MailboxProcessor protocol ActorId
+</summary>
+</member>
+<member name="P:Nessos.Thespian.MailboxProtocol.ProtocolName">
+<summary>
+ MailboxProtocol string identifier
+</summary>
+</member>
+<member name="T:Nessos.Thespian.MailboxProtocol">
+<summary>
+ Provides a primary protocol implementation that wraps around FSharp&apos;s MailboxProcessor.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Observable">
+
+</member>
+<member name="M:Nessos.Thespian.Operators.op_Dereference``1(Nessos.Thespian.Actor{``0})">
+ <summary>
+     Gets actor reference for given actor.
+ </summary>
+ <param name="actor">Actor to get reference from.</param>
+</member>
+<member name="M:Nessos.Thespian.Operators.op_LessBangEquals``2(Nessos.Thespian.ActorRef{``0},Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IReplyChannel{``1},``0})">
+ <summary>
+     Post message to actor reference and asynchronously await for reply.
+ </summary>
+ <param name="actorRef">Recipient actor.</param>
+ <param name="msg">Message builder.</param>
+</member>
+<member name="M:Nessos.Thespian.Operators.op_LessBangMinus``2(Nessos.Thespian.ActorRef{``0},Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.IReplyChannel{``1},``0})">
+ <summary>
+     Post message to actor reference and asynchronously await for reply.
+ </summary>
+ <param name="actorRef">Recipient actor.</param>
+ <param name="msg">Message builder.</param>
+</member>
+<member name="M:Nessos.Thespian.Operators.op_MinusMinusGreater``1(``0,Nessos.Thespian.ActorRef{``0})">
+ <summary>
+     Synchronously post message to actor reference.
+ </summary>
+ <param name="actorRef">Recipient actor.</param>
+ <param name="msg">Message.</param>
+</member>
+<member name="M:Nessos.Thespian.Operators.op_LessMinusBangMinus``1(Nessos.Thespian.ActorRef{``0},``0)">
+ <summary>
+     Asynchronously post message to actor reference.
+ </summary>
+ <param name="actorRef">Recipient actor.</param>
+ <param name="msg">Message.</param>
+</member>
+<member name="M:Nessos.Thespian.Operators.op_LessMinusMinus``1(Nessos.Thespian.ActorRef{``0},``0)">
+ <summary>
+     Synchronously post message to actor reference.
+ </summary>
+ <param name="actorRef">Recipient actor.</param>
+ <param name="msg">Message.</param>
+</member>
+<member name="T:Nessos.Thespian.Operators">
+<summary>
+ Collection of operators acting on actor types.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.RetryExtensions.Operators">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.RetryExtensions">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.Failover">
+
+</member>
+<member name="M:Nessos.Thespian.PowerPack.Behavior.statefulEvent``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{Nessos.Thespian.Actor{``1},Microsoft.FSharp.Control.FSharpAsync{``0}}},``0,Nessos.Thespian.Actor{``1})">
+<summary>
+ apply the return of each stateful loop to a side effect function
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.Behavior.Stateless.stateful">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.Behavior.Stateless">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.Behavior">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.Actor">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.ActorRef">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.Guarantee">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.PowerPack.Raw">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Receiver.Observable">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Receiver.Actor">
+
+</member>
+<member name="T:Nessos.Thespian.Receiver">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.ActorRef">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.Constants">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.PipeProtocol.ActorRef">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.PipeProtocol">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.Protocols">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.SocketExtensions">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.AddressUtils">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.Bidirectional">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.ConnectionPool">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.IPEndPoint">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.Message.ProtocolResponse">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.Message.ProtocolRequest">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.Message">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.Unidirectional.ProtocolMessage">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.TcpProtocol.Unidirectional">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.Uri">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Remote.Utils">
+
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.IReplyChannel`1.WithTimeout``1(Nessos.Thespian.IReplyChannel{``0},System.Int32)">
+ <summary>
+     Updates the timeout for given reply channel.
+ </summary>
+ <param name="timeoutMilliseconds">timeout to be set.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.IReplyChannel`1.ReplySynchronously``1(Nessos.Thespian.IReplyChannel{``0},Nessos.Thespian.Reply{``0})">
+ <summary>
+     Synchronously posts a reply to channel
+ </summary>
+ <param name="reply">reply value.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.IReplyChannel`1.ReplyWithException``2(Nessos.Thespian.IReplyChannel{``0},``1)">
+ <summary>
+     Posts an exception to reply channel; to be raised at the sender callsite.
+ </summary>
+ <param name="exn">Exception to be posted.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.IReplyChannel`1.Reply``1(Nessos.Thespian.IReplyChannel{``0},``0)">
+ <summary>
+     Posts a value to reply channel.
+ </summary>
+ <param name="value">Value to be posted.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.ReplyChannel.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Nessos.Thespian.IReplyChannel{``1})">
+ <summary>
+     ReplyChannel map combinator
+ </summary>
+ <param name="mapF">map function.</param>
+ <param name="replyChannel">Initial reply channel.</param>
+</member>
+<member name="T:Nessos.Thespian.ReplyChannel.ReplyChannel">
+<summary>
+ Reply channel combinators
+</summary>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.ReplyModule.unbox``1(Nessos.Thespian.Reply{System.Object})">
+ <summary>
+     Unboxes a result value.
+ </summary>
+ <param name="result">Result value.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.ReplyModule.box``1(Nessos.Thespian.Reply{``0})">
+ <summary>
+     Boxes a result value.
+ </summary>
+ <param name="result">Result value.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.ReplyModule.bind``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Nessos.Thespian.Reply{``0})">
+ <summary>
+     Map function that catches any exception raised by continuation.
+ </summary>
+ <param name="f">Continuation function.</param>
+ <param name="tresult">Input result.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.ReplyModule.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Nessos.Thespian.Reply{``0})">
+ <summary>
+     Result map combinator.
+ </summary>
+ <param name="mapF">Map function.</param>
+ <param name="tresult">Input result.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.ReplyModule.protect``1(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,``0})">
+ <summary>
+     Protects a delayed computation.
+ </summary>
+ <param name="f">Computation to be evaluated.</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.ReplyModule.exn``1(System.Exception)">
+ <summary>
+     Declare an exceptional result.
+ </summary>
+ <param name="exn">Exception</param>
+</member>
+<member name="M:Nessos.Thespian.ReplyChannel.ReplyModule.value``1(``0)">
+ <summary>
+     Declare a succesful result.
+ </summary>
+ <param name="value">Result value.</param>
+</member>
+<member name="T:Nessos.Thespian.ReplyChannel.ReplyModule">
+<summary>
+ Reply type auxiliary functions
+</summary>
+</member>
+<member name="T:Nessos.Thespian.ReplyChannel">
+<summary>
+ Reply Channel public extension methods
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.Serialization.FsPicklerMessageSerializer.Pickler">
+ <summary>
+     Direct access to the FsPickler instance.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Serialization.FsPicklerMessageSerializer.Serialize``1(``0,Microsoft.FSharp.Core.FSharpOption{System.Runtime.Serialization.StreamingContext})">
+ <summary>
+     Serialize a value to byte array.
+ </summary>
+ <param name="T">serialized value.</param>
+ <param name="context">Streaming context.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Serialization.FsPicklerMessageSerializer.Deserialize``1(System.Byte[],Microsoft.FSharp.Core.FSharpOption{System.Runtime.Serialization.StreamingContext})">
+ <summary>
+     Deserialize a value of byte array.
+ </summary>
+ <param name="data">pickled value.</param>
+ <param name="context">Streaming context.</param>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Serialization.FsPicklerMessageSerializer">
+ <summary>
+     FsPickler Implementation for IMessageSerializer.
+ </summary>
+</member>
+<member name="P:Nessos.Thespian.Serialization.IMessageSerializer.Name">
+<summary>
+ Serialization identifier
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Serialization.IMessageSerializer.Serialize``1(``0,Microsoft.FSharp.Core.FSharpOption{System.Runtime.Serialization.StreamingContext})">
+ <summary>
+     Serialize a value to byte array.
+ </summary>
+ <param name="T">serialized value.</param>
+ <param name="context">Streaming context.</param>
+</member>
+<member name="M:Nessos.Thespian.Serialization.IMessageSerializer.Deserialize``1(System.Byte[],Microsoft.FSharp.Core.FSharpOption{System.Runtime.Serialization.StreamingContext})">
+ <summary>
+     Deserialize a value of byte array.
+ </summary>
+ <param name="data">pickled value.</param>
+ <param name="context">Streaming context.</param>
+</member>
+<member name="T:Nessos.Thespian.Serialization.IMessageSerializer">
+<summary>
+ Abstract message serialization interface used by Thespian
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Serialization.defaultSerializer">
+<summary>
+ Gets or sets the default global serializer used by Thespian
+</summary>
+</member>
+<member name="T:Nessos.Thespian.Serialization">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Utils.Async.SuccessException`1">
+<summary>
+ Generic exception container used for Async.Choice implementation
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Stream.AsyncReadBytes(System.IO.Stream)">
+ <summary>
+     Asynchronously read a length-prefixed byte array from stream.
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Stream.AsyncReadBytes(System.IO.Stream,System.Int32)">
+ <summary>
+     Asynchronously read length of bytes from stream.
+ </summary>
+ <param name="length">Number of bytes to be read.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Stream.AsyncWriteBytes(System.IO.Stream,System.Byte[])">
+ <summary>
+     Asynchronously write entire byte array to stream.
+ </summary>
+ <param name="bytes">Input byte array.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.AwaitObservable.Static``1(System.IObservable{``0},Microsoft.FSharp.Core.FSharpOption{System.Int32})">
+ <summary>
+     Asynchronously await an IObservable to yield results.
+     Returns the first value to be observed.
+ </summary>
+ <param name="observable">Observable source.</param>
+ <param name="timeout">Timeout in milliseconds. Defaults to no timeout.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.Choice.Static``1(System.Collections.Generic.IEnumerable{Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.FSharpOption{``0}}})">
+ <summary>
+     NonDeterministic Choice combinator; executed computations in parallel until 
+     one completes with 'Some' result, otherwise returning 'None' if all have completed
+     with 'None'.
+ </summary>
+ <param name="tasks">Tasks to be executed.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.SleepSafe.Static(System.Int32)">
+ <summary>
+     Correct sleep implementation.
+ </summary>
+ <param name="timeout">Timeout in milliseconds</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.Isolate.Static``1(Microsoft.FSharp.Control.FSharpAsync{``0},Microsoft.FSharp.Core.FSharpOption{System.Threading.CancellationToken})">
+ <summary>
+     Isolates the execution context of an asynchronous workflow by wrapping it in a System.Task.
+ </summary>
+ <param name="workflow">Workflow to be isolated.</param>
+ <param name="cancellationToken">Optional cancellation token used by the child workflow.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.IsolateCancellation.Static``1(Microsoft.FSharp.Core.FSharpFunc{System.Threading.CancellationToken,Microsoft.FSharp.Control.FSharpAsync{``0}},Microsoft.FSharp.Core.FSharpOption{System.Threading.CancellationToken})">
+ <summary>
+     Isolates triggering of cancellation in given asynchronous workflow.
+     Cancellation bubbles up through the parent as cancellation exception.
+ </summary>
+ <param name="computationF">Computation to be executed.</param>
+ <param name="cancellationToken">Cancellation token to be used in child. Defaults to parent cancellation token.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.TryFromBeginEnd.Static``4(``0,``1,``2,Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``0,``1,``2,System.AsyncCallback,System.Object},System.IAsyncResult},Microsoft.FSharp.Core.FSharpFunc{System.IAsyncResult,``3},System.Int32,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+     A version of Async.FromBeginEnd with a timeout parameter
+     the async workflow returns a Some value when the operation completes in time
+     otherwise returns a None value.
+     On timeout, the async operation needs to be cancelled. This depends on the
+     particular resource the async operation is acting on. In the case of a Socket
+     the socket instance would have to be disposed.
+ </summary>
+ <param name="arg1">Input argument.</param>
+ <param name="arg2">Input argument.</param>
+ <param name="arg3">Input argument.</param>
+ <param name="beginF">The function initiating a traditional CLI asynchronous operation.</param>
+ <param name="endF">The function completing a traditional CLI asynchronous operation.</param>
+ <param name="timeout">Timeout in milliseconds.</param>
+ <param name="timeoutDisposeF">Disposal function to be executed on timeout.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.TryFromBeginEnd.Static``3(``0,``1,Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``0,``1,System.AsyncCallback,System.Object},System.IAsyncResult},Microsoft.FSharp.Core.FSharpFunc{System.IAsyncResult,``2},System.Int32,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+     A version of Async.FromBeginEnd with a timeout parameter
+     the async workflow returns a Some value when the operation completes in time
+     otherwise returns a None value.
+     On timeout, the async operation needs to be cancelled. This depends on the
+     particular resource the async operation is acting on. In the case of a Socket
+     the socket instance would have to be disposed.
+ </summary>
+ <param name="arg1">Input argument.</param>
+ <param name="arg2">Input argument.</param>
+ <param name="beginF">The function initiating a traditional CLI asynchronous operation.</param>
+ <param name="endF">The function completing a traditional CLI asynchronous operation.</param>
+ <param name="timeout">Timeout in milliseconds.</param>
+ <param name="timeoutDisposeF">Disposal function to be executed on timeout.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.TryFromBeginEnd.Static``2(``0,Microsoft.FSharp.Core.FSharpFunc{System.Tuple{``0,System.AsyncCallback,System.Object},System.IAsyncResult},Microsoft.FSharp.Core.FSharpFunc{System.IAsyncResult,``1},System.Int32,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+     A version of Async.FromBeginEnd with a timeout parameter
+     the async workflow returns a Some value when the operation completes in time
+     otherwise returns a None value.
+     On timeout, the async operation needs to be cancelled. This depends on the
+     particular resource the async operation is acting on. In the case of a Socket
+     the socket instance would have to be disposed.
+ </summary>
+ <param name="arg">Input argument.</param>
+ <param name="beginF">The function initiating a traditional CLI asynchronous operation.</param>
+ <param name="endF">The function completing a traditional CLI asynchronous operation.</param>
+ <param name="timeout">Timeout in milliseconds.</param>
+ <param name="timeoutDisposeF">Disposal function to be executed on timeout.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.TryFromBeginEnd.Static``1(Microsoft.FSharp.Core.FSharpFunc{System.Tuple{System.AsyncCallback,System.Object},System.IAsyncResult},Microsoft.FSharp.Core.FSharpFunc{System.IAsyncResult,``0},System.Int32,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+ <summary>
+     A version of Async.FromBeginEnd with a timeout parameter
+     the async workflow returns a Some value when the operation completes in time
+     otherwise returns a None value.
+     On timeout, the async operation needs to be cancelled. This depends on the
+     particular resource the async operation is acting on. In the case of a Socket
+     the socket instance would have to be disposed.
+ </summary>
+ <param name="beginF">The function initiating a traditional CLI asynchronous operation.</param>
+ <param name="endF">The function completing a traditional CLI asynchronous operation.</param>
+ <param name="timeout">Timeout in milliseconds.</param>
+ <param name="timeoutDisposeF">Disposal function to be executed on timeout.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.AwaitTask.Static``1(System.Threading.Tasks.Task{``0},System.Int32)">
+ <summary>
+     Async.AwaitTask extension with timeout.
+ </summary>
+ <param name="task">Task to be awaited.</param>
+ <param name="timeout">Timeout in milliseconds.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.WithTimeout.Static``1(System.Int32,Microsoft.FSharp.Control.FSharpAsync{``0})">
+ <summary>
+     Cancels a workflow once timeout has expired.
+ </summary>
+ <param name="timeout">timeout in milliseconds.</param>
+ <param name="computation">Computation to be executed.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.ConditionalCancel.Static``1(Microsoft.FSharp.Control.FSharpAsync{System.Boolean},Microsoft.FSharp.Control.FSharpAsync{``0})">
+ <summary>
+     Wraps a workflow that can be cancelled once a conditional workflow is satisfied.
+ </summary>
+ <param name="condition">Conditional that triggers cancellation if true.</param>
+ <param name="computation">Wrapped computation.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.Raise.Static``2(``0)">
+ <summary>
+     Continuation-based raise operator.
+ </summary>
+ <param name="e">exception to be raised.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.TaskCompletionSource`1.AsyncWaitResult``1(System.Threading.Tasks.TaskCompletionSource{``0})">
+ <summary>
+     Asynchronously await result
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.TaskCompletionSource`1.AsyncWaitResult``1(System.Threading.Tasks.TaskCompletionSource{``0},System.Int32)">
+ <summary>
+     Asynchronously await result or give up on timeout
+ </summary>
+ <param name="timeout">timeout in milliseconds.</param>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Array.foldAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Control.FSharpAsync{``0}}},``0,``1[])">
+ <summary>
+     Async fold operation on arrays.
+ </summary>
+ <param name="foldF">Folding function.</param>
+ <param name="state">Initial state.</param>
+ <param name="items">Input array.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.Async.Array">
+
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.List.chooseAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.FSharpOption{``1}}},Microsoft.FSharp.Collections.FSharpList{``0})">
+ <summary>
+     Async choose function.
+ </summary>
+ <param name="choiceF">choice function.</param>
+ <param name="items">Input list.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.List.mapAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{``1}},Microsoft.FSharp.Collections.FSharpList{``0})">
+ <summary>
+     Async map function.
+ </summary>
+ <param name="mapF">Map function.</param>
+ <param name="items">Input list.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.List.foldBackAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Control.FSharpAsync{``1}}},Microsoft.FSharp.Collections.FSharpList{``0},``1)">
+ <summary>
+     Async foldBack operation on lists.
+ </summary>
+ <param name="foldF">folding function.</param>
+ <param name="items">input list.</param>
+ <param name="state">initial state.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.List.foldWhileAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{``0,System.Boolean}}}},``0,Microsoft.FSharp.Collections.FSharpList{``1})">
+ <summary>
+     Conditional async fold operations on lists.
+ </summary>
+ <param name="foldF"></param>
+ <param name="state"></param>
+ <param name="items"></param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.List.foldAsync``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Control.FSharpAsync{``0}}},``0,Microsoft.FSharp.Collections.FSharpList{``1})">
+ <summary>
+     Async fold operation on lists.
+ </summary>
+ <param name="foldF">Folding function.</param>
+ <param name="state">Initial state.</param>
+ <param name="items">Input list.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.Async.List">
+
+</member>
+<member name="M:Nessos.Thespian.Utils.Async.Async.memoize``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{``1}})">
+ <summary>
+     Async memoization combinator
+ </summary>
+ <param name="f">Async workflow to be memoized.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.Async.Async">
+
+</member>
+<member name="T:Nessos.Thespian.Utils.Async">
+<summary>
+ F# Async extension methods
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Choice.splitArray``2(Microsoft.FSharp.Core.FSharpChoice{``0,``1}[])">
+ <summary>
+     Split an array of Choice values.
+ </summary>
+ <param name="inputs">choice values.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Choice.split``2(Microsoft.FSharp.Collections.FSharpList{Microsoft.FSharp.Core.FSharpChoice{``0,``1}})">
+ <summary>
+     Split a list of Choice values.
+ </summary>
+ <param name="inputs">choice values.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.Choice">
+<summary>
+ Extensions for F# Choice types
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.CountdownLatch.WaitToZero">
+<summary>
+ Spin-wait until the latch is reset
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.CountdownLatch.Increment">
+<summary>
+ Set the latch
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.CountdownLatch.Decrement">
+<summary>
+ Reset the latch
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Utils.Concurrency.CountdownLatch">
+ <summary>
+     Thread-safe countdown latch.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.Utils.Concurrency.ConcurrentCounter.Value">
+ <summary>
+     Current counter value
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.ConcurrentCounter.Increment">
+ <summary>
+     Increment the counter
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Utils.Concurrency.ConcurrentCounter">
+ <summary>
+     Thread safe counter implementation
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.Latch.Trigger">
+ <summary>
+     Trigger the latch; returns true iff call was successful.
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Utils.Concurrency.Latch">
+ <summary>
+     Thread-safe latch
+ </summary>
+</member>
+<member name="">
+
+</member>
+<member name="P:Nessos.Thespian.Utils.Concurrency.Atom`1.Value">
+<summary>
+ Get Current Value
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.Atom`1.Transact``1(Microsoft.FSharp.Core.FSharpFunc{`0,System.Tuple{`0,``0}})">
+ <summary>
+ Perform atomic transaction on container.
+ </summary>
+ <param name="transactionF">transaction function.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.Atom`1.Swap(Microsoft.FSharp.Core.FSharpFunc{`0,`0})">
+ <summary>
+ Atomically updates the container.
+ </summary>
+ <param name="updateF">updater function.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.Atom`1.Force(`0)">
+ <summary>
+ Force a new value on container.
+ </summary>
+ <param name="value">value to be set.</param>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Utils.Concurrency.Atom`1">
+<summary>
+ Thread-safe value container with optimistic update semantics
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.Atom.force``1(Nessos.Thespian.Utils.Concurrency.Atom{``0},``0)">
+ <summary>
+     Force value on given atom.
+ </summary>
+ <param name="atom">Atom to be updated.</param>
+ <param name="value">Value to be set.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.Atom.transact``2(Nessos.Thespian.Utils.Concurrency.Atom{``0},Microsoft.FSharp.Core.FSharpFunc{``0,System.Tuple{``0,``1}})">
+ <summary>
+ Perform atomic transaction on container.
+ </summary>
+ <param name="atom">Atom to perform transaction on.</param>
+ <param name="transactF">Transaction function.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.Atom.swap``1(Nessos.Thespian.Utils.Concurrency.Atom{``0},Microsoft.FSharp.Core.FSharpFunc{``0,``0})">
+ <summary>
+ Atomically updates the container with given function.
+ </summary>
+ <param name="atom">Atom to be updated.</param>
+ <param name="updateF">Updater function.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Concurrency.Atom.create``1(``0)">
+ <summary>
+ Initialize a new atomic container with given value.
+ </summary>
+ <param name="value">Initial value.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.Concurrency.Atom">
+<summary>
+ Atom utilities module
+</summary>
+</member>
+<member name="T:Nessos.Thespian.Utils.Concurrency">
+<summary>
+ Collection of Concurrency-related utilities
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Control.reraise'``2(``0)">
+ <summary>
+     Reraise operator that can be used everywhere.
+ </summary>
+ <param name="e">exception to be reraised.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Utils.Control.raiseWithStackTrace``2(System.String,``0)">
+ <summary>
+     Raise exception with given stacktrace
+ </summary>
+ <param name="trace">Stacktrace to be set.</param>
+ <param name="e">exception to be raised.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Control.Exception.SetStackTrace(System.Exception,System.String)">
+ <summary>
+     Set a custom stacktrace to given exception.
+ </summary>
+ <param name="trace">Stacktrace to be set.</param>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Utils.Control">
+<summary>
+ Exception handling utilities
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.FSharpClass.equalsByComparison``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0,System.Object)">
+ <summary>
+     Equality by comparison projection.
+ </summary>
+ <param name="proj">Projection function.</param>
+ <param name="this">this value.</param>
+ <param name="that">that value.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.FSharpClass.equalsBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0,System.Object)">
+ <summary>
+     Equality by projection.
+ </summary>
+ <param name="proj">Projection function.</param>
+ <param name="this">this value.</param>
+ <param name="that">that value.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.FSharpClass.hashBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0)">
+ <summary>
+     Hashcode by projection.
+ </summary>
+ <param name="proj">Projection function.</param>
+ <param name="this">this value.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.FSharpClass.compareBy``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0,System.Object)">
+ <summary>
+     Comparison by projection.
+ </summary>
+ <param name="proj">Projection function.</param>
+ <param name="this">this value.</param>
+ <param name="that">that value.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.FSharpClass">
+<summary>
+ A collection of utilities for authoring F# classes
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.IOExtensions.BinaryReader.ReadByteArray(System.IO.BinaryReader)">
+ <summary>
+     Reads a length-prefixed by array from underlying stream.
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.IOExtensions.BinaryWriter.WriteByteArray(System.IO.BinaryWriter,System.Byte[])">
+ <summary>
+     Writes a length-prefixed byte array to underlying stream.
+ </summary>
+ <param name="bytes">Input buffer.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.IOExtensions">
+
+</member>
+<member name="M:Nessos.Thespian.Utils.Option.bind2``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``1,Microsoft.FSharp.Core.FSharpOption{``0})">
+ <summary>
+     match t with None -> s | Some t0 -> f t0
+ </summary>
+ <param name="f">Mapping function.</param>
+ <param name="s">Default value.</param>
+ <param name="t">Optional input.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Option.ofList``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+ <summary>
+     Attempt to return the head of a list.
+ </summary>
+ <param name="xs">Input list.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Option.ofNull``1(``0)">
+ <summary>
+     Returns 'Some t' iff t is not null.
+ </summary>
+ <param name="t">Value to be examined.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Option.filter``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Microsoft.FSharp.Core.FSharpOption{``0})">
+ <summary>
+     Returns 'Some x' iff f x is satisfied.
+ </summary>
+ <param name="f">predicate to be evaluated.</param>
+ <param name="opt">Input optional.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.Option">
+<summary>
+ F# option extensions
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.RegEx.|Matches|_|(System.String,System.String)">
+ <summary>
+     Memoized RegEx active pattern.
+     Returns all matches in text for pattern.
+ </summary>
+ <param name="pattern">RegEx pattern.</param>
+ <param name="input">input text.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.RegEx.|Match|_|(System.String,System.String)">
+ <summary>
+     Memoized RegEx active pattern.
+     Returns the values of the first matching pattern and its groupings.
+ </summary>
+ <param name="pattern">RegEx pattern.</param>
+ <param name="input">input text.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.RegEx.tryMatches(System.String,System.String)">
+ <summary>
+     Memoized RegEx matching. 
+     Returns all matches in text for pattern.
+ </summary>
+ <param name="pattern">RegEx pattern.</param>
+ <param name="input">input text.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.RegEx.tryMatch(System.String,System.String)">
+ <summary>
+     Memoized RegEx matching. 
+     Returns the values of the first matching pattern and its groupings.
+ </summary>
+ <param name="pattern">RegEx pattern.</param>
+ <param name="input">input text.</param>
+</member>
+<member name="">
+
+</member>
+<member name="T:Nessos.Thespian.Utils.RegEx">
+<summary>
+ Regular Expression extensions
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Seq.tryHead``1(System.Collections.Generic.IEnumerable{``0})">
+ <summary>
+     Try reading the head of given sequence.
+ </summary>
+ <param name="xs">Input sequence.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.Seq">
+<summary>
+ IEnumerable extensions
+</summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Task.Task`1.TimeoutAfter``1(System.Threading.Tasks.Task{``0},System.Int32)">
+ <summary>
+     Creates a new task that terminates with None if supplied timeout interval has expired.
+ </summary>
+ <param name="timeout">Timeout in milliseconds.</param>
+</member>
+<member name="T:Nessos.Thespian.Utils.Task">
+<summary>
+ System.Threading.Task extensions
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:Nessos.Thespian.Utils.Utility.SerializationInfo.Read``1(System.Runtime.Serialization.SerializationInfo,System.String)">
+ <summary>
+     Read value from SerializationInfo.
+ </summary>
+ <param name="id">value identifier.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Utility.SerializationInfo.Write``1(System.Runtime.Serialization.SerializationInfo,System.String,``0)">
+ <summary>
+     Write value to SerializationInfo.
+ </summary>
+ <param name="id">value identifier.</param>
+ <param name="value">value to be written.</param>
+</member>
+<member name="M:Nessos.Thespian.Utils.Utility.sprintf``1(Microsoft.FSharp.Core.PrintfFormat{``0,Microsoft.FSharp.Core.Unit,System.String,System.String})">
+ <summary>
+     Fast sprintf function; used instead of inefficient sprintf found in FSharp.Core v.3.0 and below.
+ </summary>
+</member>
+<member name="M:Nessos.Thespian.Utils.Utility.memoize``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1})">
+ <summary>
+     Thread-safe memoization combinator.
+ </summary>
+ <param name="f">Function to be memoized.</param>
+</member>
+<member name="P:Nessos.Thespian.Utils.Utility.isFsharp31">
+<summary>
+ Returns true if runtime F# version is at least 3.1
+</summary>
+</member>
+<member name="P:Nessos.Thespian.Utils.Utility.fsharpVersion">
+<summary>
+ detect the running version of F#
+</summary>
+</member>
+<member name="T:Nessos.Thespian.Utils.Utility">
+<summary>
+ Collection of general-purpose utility functions
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:System.AssemblyVersionInformation">
+
+</member>
+</members>
+</doc>

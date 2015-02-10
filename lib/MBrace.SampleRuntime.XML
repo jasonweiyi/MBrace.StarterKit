@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>MBrace.SampleRuntime</name></assembly>
+<members>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:MBrace.SampleRuntime.MBraceRuntime.WorkerExecutable(System.String)">
+<summary>
+ Gets or sets the worker executable location.
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.MBraceRuntime.Workers">
+<summary>
+ Gets all worker processes in the runtime
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.MBraceRuntime.WorkerExecutable">
+<summary>
+ Gets or sets the worker executable location.
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.MBraceRuntime.StoreClient">
+<summary>
+ Returns the store client for provided runtime
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.MBraceRuntime.RunLocalAsync``1(MBrace.Cloud{``0})">
+ <summary>
+     Run workflow as local, in-memory computation
+ </summary>
+ <param name="workflow">Workflow to execute</param>
+</member>
+<member name="M:MBrace.SampleRuntime.MBraceRuntime.RunLocal``1(MBrace.Cloud{``0},Microsoft.FSharp.Core.FSharpOption{System.Threading.CancellationToken})">
+ <summary>
+     Run workflow as local, in-memory computation
+ </summary>
+ <param name="workflow">Workflow to execute</param>
+ <param name="cancellationToken">Cancellation token</param>
+</member>
+<member name="M:MBrace.SampleRuntime.MBraceRuntime.RunAsync``1(MBrace.Cloud{``0},Microsoft.FSharp.Core.FSharpOption{System.Threading.CancellationToken},Microsoft.FSharp.Core.FSharpOption{MBrace.FaultPolicy})">
+ <summary>
+     Asynchronously execute a workflow on the distributed runtime.
+ </summary>
+ <param name="workflow">Workflow to be executed.</param>
+ <param name="cancellationToken">Cancellation token for computation.</param>
+ <param name="faultPolicy">Fault policy. Defaults to infinite retries.</param>
+</member>
+<member name="M:MBrace.SampleRuntime.MBraceRuntime.RunAsTask``1(MBrace.Cloud{``0},Microsoft.FSharp.Core.FSharpOption{System.Threading.CancellationToken},Microsoft.FSharp.Core.FSharpOption{MBrace.FaultPolicy})">
+ <summary>
+     Execute a workflow on the distributed runtime as task.
+ </summary>
+ <param name="workflow">Workflow to be executed.</param>
+ <param name="cancellationToken">Cancellation token for computation.</param>
+ <param name="faultPolicy">Fault policy. Defaults to infinite retries.</param>
+</member>
+<member name="M:MBrace.SampleRuntime.MBraceRuntime.Run``1(MBrace.Cloud{``0},Microsoft.FSharp.Core.FSharpOption{System.Threading.CancellationToken},Microsoft.FSharp.Core.FSharpOption{MBrace.FaultPolicy})">
+ <summary>
+     Execute a workflow on the distributed runtime synchronously
+ </summary>
+ <param name="workflow">Workflow to be executed.</param>
+ <param name="cancellationToken">Cancellation token for computation.</param>
+ <param name="faultPolicy">Fault policy. Defaults to infinite retries.</param>
+</member>
+<member name="M:MBrace.SampleRuntime.MBraceRuntime.KillAllWorkers">
+<summary>
+ Violently kills all worker nodes in the runtime
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.MBraceRuntime.InitLocal(System.Int32)">
+<summary>
+ Initialize a new local rutime instance with supplied worker count.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.MBraceRuntime.AppendWorkers(System.Int32)">
+<summary>
+ Appens count of new worker processes to the runtime.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.MBraceRuntime">
+<summary>
+ MBrace Sample runtime client instance.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.AssemblyExporter.LoadDependencies(Microsoft.FSharp.Collections.FSharpList{Nessos.Vagabond.AssemblyId})">
+ <summary>
+     Request the loading of assembly dependencies from remote
+     assembly exporter to the local application domain.
+ </summary>
+ <param name="ids">Assembly id's to be loaded in app domain.</param>
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.AssemblyExporter.ComputeDependencies``1(``0)">
+ <summary>
+     Compute assembly dependencies for provided object graph.
+ </summary>
+ <param name="graph">Object graph to be analyzed</param>
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.AssemblyExporter">
+<summary>
+ Provides assembly uploading facility for Vagabond.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.ResourceFactory">
+<summary>
+ Provides facility for remotely deploying resources
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.Channel`1.Init(System.String)">
+<summary>
+ Initializes a new distributed queue instance.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.Queue`2.Init(Microsoft.FSharp.Core.FSharpFunc{`1,Microsoft.FSharp.Core.FSharpFunc{`0,System.Boolean}})">
+<summary>
+ Initializes a new distribued queue instance.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.Queue`2">
+<summary>
+ Provides a distributed, fault-tolerant queue implementation
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:MBrace.SampleRuntime.Actors.LeaseMonitor.Threshold">
+<summary>
+ Heartbeat fault threshold
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.LeaseMonitor.Release">
+<summary>
+ Declare lease to be released successfuly
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.LeaseMonitor.InitHeartBeat">
+<summary>
+ Initializes an asynchronous hearbeat sender workflow
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.LeaseMonitor.Init(System.TimeSpan)">
+ <summary>
+     Initializes a new lease monitor.
+ </summary>
+ <param name="threshold">Heartbeat fault threshold.</param>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.LeaseMonitor.DeclareFault">
+<summary>
+ Declare fault during lease
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.LeaseMonitor">
+<summary>
+ Distributed lease monitor instance
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.DistributedCancellationTokenSource.Init(Microsoft.FSharp.Core.FSharpOption{MBrace.SampleRuntime.Actors.DistributedCancellationTokenSource})">
+ <summary>
+     Initializes a new distributed cancellation token source in the current process
+ </summary>
+ <param name="parent">Linked parent cancellation token source</param>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.DistributedCancellationTokenSource.GetLocalCancellationToken">
+<summary>
+ Creates a System.Threading.CancellationToken that is linked
+ to the distributed cancellation token.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.DistributedCancellationTokenSource">
+<summary>
+ Defines a distributed cancellation token source that can be cancelled
+ in the context of a distributed runtime.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.ResultCell`1.TryGetResult">
+<summary>
+ Try getting the result
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.ResultCell`1.SetResult(MBrace.SampleRuntime.Actors.Result{`0})">
+<summary>
+ Try setting the result
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.ResultCell`1.Init">
+<summary>
+ Initialize a new result cell in the local process
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.ResultCell`1.AwaitResult">
+<summary>
+ Asynchronously poll for result
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.ResultCell`1">
+<summary>
+ Defines a reference to a distributed result cell instance.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.Result`1">
+<summary>
+ Result value
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.ResultAggregator`1.ToArray">
+<summary>
+ Results the completed
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.ResultAggregator`1.SetResult(System.Int32,`0)">
+<summary>
+ Asynchronously assign a value at given index.
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.ResultAggregator`1.Init(System.Int32)">
+<summary>
+ Initializes a result aggregator of given size at the current process.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.ResultAggregator`1">
+<summary>
+ A distributed resource that aggregates an array of results.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.Cell`1.Init(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,`0})">
+<summary>
+ Initialize a distributed cell from a value factory ; assume exception safe
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="P:MBrace.SampleRuntime.Actors.Latch.Value">
+<summary>
+ Returns the current latch value
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.Latch.Init(System.Int32)">
+<summary>
+ Initialize a new latch instance in the current process
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.Latch.Increment">
+<summary>
+ Atomically increment the latch
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.Latch">
+<summary>
+ Distributed latch implementation
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.Actor.Stateless``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit}})">
+<summary>
+ Exception-safe stateless actor behavior combinator
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.Actor.Stateful``2(``0,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Control.FSharpAsync{``0}}})">
+<summary>
+ Exception-safe stateful actor behavior combinator
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Actors.Actor.Publish``1(Nessos.Thespian.Actor{``0})">
+<summary>
+ Publishes an actor instance to the default TCP protocol
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Actors.Actor">
+<summary>
+ Actor publication utilities
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Argument">
+<summary>
+ BASE64 serialized argument parsing schema
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Combinators">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Config.getFileStoreConfiguration(System.String)">
+<summary>
+ initializes store configuration for runtime
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Config.getLocalEndpoint">
+<summary>
+ returns the local ip endpoint used by Thespian
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Config.initRuntimeState">
+<summary>
+ runtime configuration initializer function
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Config._initRuntimeState">
+<summary>
+ vagabond, fspickler and thespian state initializations
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Config">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Main">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.RuntimeProvider.RuntimeProvider.FromTask(MBrace.SampleRuntime.Tasks.RuntimeState,MBrace.SampleRuntime.Tasks.ProcessInfo,Microsoft.FSharp.Collections.FSharpList{Nessos.Vagabond.AssemblyId},MBrace.SampleRuntime.Tasks.Task)">
+<summary>
+ Creates a runtime provider instance for a provided task
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.RuntimeProvider.RuntimeProvider.CreateInMemoryRuntime(MBrace.SampleRuntime.Tasks.RuntimeState,MBrace.SampleRuntime.Tasks.ProcessInfo)">
+<summary>
+ Creates a runtime provider instance for in-memory computation
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.RuntimeProvider.RuntimeProvider">
+<summary>
+ Scheduling implementation provider
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.RuntimeProvider.Worker">
+<summary>
+ IWorkerRef implementation for the runtime
+</summary>
+</member>
+<member name="T:MBrace.SampleRuntime.RuntimeProvider">
+
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.RuntimeState.Logger">
+<summary>
+ Distributed logger facility
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.RuntimeState.Workers">
+<summary>
+ returns a manifest of workers available to the cluster.
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.RuntimeState.ResourceFactory">
+<summary>
+ Reference to the runtime resource manager
+ Used for generating latches, cancellation tokens and result cells.
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.RuntimeState.AssemblyExporter">
+<summary>
+ Reference to a Vagabond assembly exporting actor.
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.RuntimeState.TaskQueue">
+<summary>
+ Reference to the global task queue employed by the runtime
+ Queue contains pickled task and its vagabond dependency manifest
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.RuntimeState.IPEndPoint">
+<summary>
+ TCP endpoint used by the runtime state container
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.RuntimeState.TryDequeue(MBrace.IWorkerRef)">
+<summary>
+ Attempt to dequeue a task from the runtime task queue
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.RuntimeState.StartAsCell``1(MBrace.SampleRuntime.Tasks.ProcessInfo,Microsoft.FSharp.Collections.FSharpList{Nessos.Vagabond.AssemblyId},MBrace.SampleRuntime.Actors.DistributedCancellationTokenSource,MBrace.FaultPolicy,Microsoft.FSharp.Core.FSharpOption{MBrace.IWorkerRef},MBrace.Cloud{``0})">
+ <summary>
+     Schedules a cloud workflow as a distributed result cell.
+     Used for root-level workflows or child tasks.
+ </summary>
+ <param name="dependencies">Declared workflow dependencies.</param>
+ <param name="cts">Cancellation token source bound to task.</param>
+ <param name="wf">Input workflow.</param>
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.RuntimeState.InitLocal(Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.Unit},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,MBrace.IWorkerRef[]})">
+<summary>
+ Initialize a new runtime state in the local process
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.RuntimeState.EnqueueTasks(MBrace.SampleRuntime.Tasks.PickledTask[])">
+ <summary>
+     Atomically schedule a collection of tasks
+ </summary>
+ <param name="tasks">Tasks to be enqueued</param>
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.RuntimeState.EnqueueTask``1(MBrace.SampleRuntime.Tasks.ProcessInfo,Microsoft.FSharp.Collections.FSharpList{Nessos.Vagabond.AssemblyId},MBrace.SampleRuntime.Actors.DistributedCancellationTokenSource,MBrace.FaultPolicy,Microsoft.FSharp.Core.FSharpFunc{MBrace.Continuation.ExecutionContext,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpFunc{MBrace.Continuation.ExecutionContext,Microsoft.FSharp.Core.FSharpFunc{MBrace.Continuation.ExceptionDispatchInfo,Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpFunc{MBrace.Continuation.ExecutionContext,Microsoft.FSharp.Core.FSharpFunc{System.OperationCanceledException,Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpOption{MBrace.IWorkerRef},MBrace.Cloud{``0})">
+ <summary>
+     Create a pickled task out of given cloud workflow and continuations
+ </summary>
+ <param name="dependencies">Vagabond dependency manifest.</param>
+ <param name="cts">Distributed cancellation token source.</param>
+ <param name="sc">Success continuation</param>
+ <param name="ec">Exception continuation</param>
+ <param name="cc">Cancellation continuation</param>
+ <param name="wf">Workflow</param>
+</member>
+<member name="T:MBrace.SampleRuntime.Tasks.RuntimeState">
+<summary>
+ Defines a handle to the state of a runtime instance
+ All information pertaining to the runtime execution state
+ is contained in a single process -- the initializing client.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.PickledTask.CreateTask``1(MBrace.SampleRuntime.Tasks.ProcessInfo,Microsoft.FSharp.Collections.FSharpList{Nessos.Vagabond.AssemblyId},MBrace.SampleRuntime.Actors.DistributedCancellationTokenSource,MBrace.FaultPolicy,Microsoft.FSharp.Core.FSharpFunc{MBrace.Continuation.ExecutionContext,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpFunc{MBrace.Continuation.ExecutionContext,Microsoft.FSharp.Core.FSharpFunc{MBrace.Continuation.ExceptionDispatchInfo,Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpFunc{MBrace.Continuation.ExecutionContext,Microsoft.FSharp.Core.FSharpFunc{System.OperationCanceledException,Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpOption{MBrace.IWorkerRef},MBrace.Cloud{``0})">
+ <summary>
+     Create a pickled task out of given cloud workflow and continuations
+ </summary>
+ <param name="dependencies">Vagabond dependency manifest.</param>
+ <param name="cts">Distributed cancellation token source.</param>
+ <param name="sc">Success continuation</param>
+ <param name="ec">Exception continuation</param>
+ <param name="cc">Cancellation continuation</param>
+ <param name="wf">Workflow</param>
+</member>
+<member name="T:MBrace.SampleRuntime.Tasks.PickledTask">
+<summary>
+ Type of pickled task as represented in the task queue
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.Task.CancellationTokenSource">
+<summary>
+ Distributed cancellation token source bound to task
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.Task.Econt">
+<summary>
+ Exception Continuation
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.Task.FaultPolicy">
+<summary>
+ Task fault policy
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.Task.StartTask">
+<summary>
+ Triggers task execution with worker-provided execution context
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.Task.TaskId">
+<summary>
+ Task unique identifier
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.Task.ProcessInfo">
+<summary>
+ Cloud process information
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.Task.Type">
+<summary>
+ Return type of the defining cloud workflow.
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.Task.RunAsync(MBrace.Runtime.ICloudRuntimeProvider,MBrace.Store.ICloudAtomProvider,MBrace.Store.ICloudChannelProvider,Microsoft.FSharp.Collections.FSharpList{Nessos.Vagabond.AssemblyId},System.Int32,MBrace.SampleRuntime.Tasks.Task)">
+ <summary>
+     Asynchronously executes task in the local process.
+ </summary>
+ <param name="runtimeProvider">Local scheduler implementation.</param>
+ <param name="dependencies">Task dependent assemblies.</param>
+ <param name="task">Task to be executed.</param>
+</member>
+<member name="T:MBrace.SampleRuntime.Tasks.Task">
+<summary>
+ Defines a task to be executed in a worker node
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.ProcessInfo.DefaultChannelContainer">
+<summary>
+ Default channel container for process
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.ProcessInfo.DefaultAtomContainer">
+<summary>
+ Default atom container for process
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.ProcessInfo.DefaultDirectory">
+<summary>
+ Default file store container for process
+</summary>
+</member>
+<member name="P:MBrace.SampleRuntime.Tasks.ProcessInfo.ProcessId">
+<summary>
+ Cloud process unique identifier
+</summary>
+</member>
+<member name="T:MBrace.SampleRuntime.Tasks.ProcessInfo">
+<summary>
+ Process information record
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.TaskExecutionMonitor.TriggerFault(MBrace.Continuation.ExecutionContext,System.Exception)">
+<summary>
+ Triggers task fault on the contextual TaskExecutionMonitor
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.TaskExecutionMonitor.TriggerCompletion(MBrace.Continuation.ExecutionContext)">
+<summary>
+ Triggers task completion on the contextual TaskExecutionMonitor
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.TaskExecutionMonitor.ProtectSync(MBrace.Continuation.ExecutionContext,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Runs a single threaded, synchronous computation,
+ triggering the contextual TaskExecutionMonitor on uncaught exception
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.TaskExecutionMonitor.ProtectAsync(MBrace.Continuation.ExecutionContext,Microsoft.FSharp.Control.FSharpAsync{Microsoft.FSharp.Core.Unit})">
+<summary>
+ Runs an asynchronous computation,
+ triggering the contextual TaskExecutionMonitor on uncaught exception
+</summary>
+</member>
+<member name="M:MBrace.SampleRuntime.Tasks.TaskExecutionMonitor.AwaitCompletion(MBrace.SampleRuntime.Tasks.TaskExecutionMonitor)">
+<summary>
+ Asynchronously await completion of provided TaskExecutionMonitor
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:MBrace.SampleRuntime.Tasks.TaskExecutionMonitor">
+<summary>
+ Provides a mechanism for cooperative task execution monitoring.
+</summary>
+</member>
+<member name="T:MBrace.SampleRuntime.Tasks">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:MBrace.SampleRuntime.Worker.initWorker``1(MBrace.SampleRuntime.Tasks.RuntimeState,System.Int32)">
+ <summary>
+     Initializes a worker loop. Worker polls task queue of supplied
+     runtime for available tasks and executes as appropriate.
+ </summary>
+ <param name="runtime">Runtime to subscribe to.</param>
+ <param name="maxConcurrentTasks">Maximum tasks to be executed concurrently by worker.</param>
+</member>
+<member name="M:MBrace.SampleRuntime.Worker.printfn``1(Microsoft.FSharp.Core.PrintfFormat{``0,Microsoft.FSharp.Core.Unit,System.String,Microsoft.FSharp.Core.Unit})">
+<summary>
+ Thread-safe printfn
+</summary>
+</member>
+<member name="T:MBrace.SampleRuntime.Worker">
+
+</member>
+</members>
+</doc>
