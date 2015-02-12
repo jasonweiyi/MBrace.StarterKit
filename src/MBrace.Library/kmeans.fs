@@ -1,4 +1,4 @@
-﻿namespace MBrace.Library.KMeans
+﻿namespace MBrace.Library.Clustering
 
 open MBrace
 open System
@@ -11,13 +11,13 @@ type Point = float[]
 module KMeans =
 
     // This function partitions an array into n arrays.
-    let private partition n (a : _ array) =
+    let internal partition n (a : _ array) =
         [| for i in 0 .. n - 1 ->
             let i, j = a.Length * i / n, a.Length * (i + 1) / n
             Array.sub a i (j - i) |]
 
     // This function calculates the distance between two points.
-    let private dist (arr1 : Point) (arr2 : Point) = Array.fold2 (fun acc elem1 elem2 -> acc + pown (elem1 - elem2) 2) 0.0 arr1 arr2
+    let internal dist (arr1 : Point) (arr2 : Point) = Array.fold2 (fun acc elem1 elem2 -> acc + pown (elem1 - elem2) 2) 0.0 arr1 arr2
 
     // This function assigns a point to the correct centroid, and returns the index of that centroid.
     let private findCentroid (p : Point) (centroids : Point[]) : int =

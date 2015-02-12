@@ -59,7 +59,9 @@
   </Target>
   <ItemGroup>
     <Compile Include="kmeans.fs" />
+    <Compile Include="canopy.fs" />
     <None Include="scripts\kmeans.fsx" />
+    <None Include="scripts\canopy.fsx" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
