@@ -1,11 +1,13 @@
 redirects: on
 source https://www.nuget.org/api/v2
 
-nuget MBrace.Core prerelease
+nuget FSharp.Core
+nuget MBrace.Core
 nuget MBrace.Flow
 nuget MBrace.Thespian
-nuget MBrace.Runtime prerelease
-nuget MBrace.Azure 0.13.1-beta
+nuget MBrace.Runtime
+nuget MBrace.Azure 1.1.6
+nuget MBrace.Azure.Management
 nuget Streams
 nuget Suave
 nuget AForge
@@ -14,3 +16,9 @@ nuget AForge.Math
 nuget MathNet.Numerics ~> 3.7.0
 nuget MathNet.Numerics.FSharp
 nuget MathNet.Numerics.MKL.Win-x64 ~> 1.8.0
+nuget FSharp.Data ~> 2.0
+nuget FSharp.Charting
+nuget FSharp.Control.AsyncSeq
+nuget XPlot.GoogleCharts ~> 1.2
+nuget XPlot.GoogleCharts.WPF
+nuget RProvider

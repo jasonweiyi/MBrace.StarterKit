@@ -2,6 +2,8 @@
 #load "ThespianCluster.fsx"
 //#load "AzureCluster.fsx"
 
+#load "lib/utils.fsx"
+
 // Note: Before running, choose your cluster version at the top of this script.
 // If necessary, edit AzureCluster.fsx to enter your connection strings.
 
@@ -16,6 +18,8 @@ let cluster = Config.GetCluster()
 (**
 
 # Using C# DLLs and Native Components 
+
+> This tutorial is from the [MBrace Starter Kit](https://github.com/mbraceproject/MBrace.StarterKit).
 
 It is very simple to use C# DLLs, native DLLs and any nuget packages in your cloud computations.
 For C# DLLs you just download and reference the packages as normal
@@ -47,23 +51,25 @@ let check = (matrix1 * matrix1.Inverse()).Determinant()
 
 Next, run the code on MBrace. Note that the DLLs from the packages are uploaded automatically. 
 
-The following nverts 100 150x150 matrices using C# code on the cluster. 
+The following inverts 100 150x150 matrices using C# code on the cluster. 
 
 *) 
 let csharpMathJob = 
     [ for i in 1 .. 100 -> 
-         cloud { 
+         local { 
+            Control.UseManaged()
+            Control.UseSingleThread()
             let m = Matrix<double>.Build.Random(250,250) 
             return (m * m.Inverse()).Determinant()
          } ]
-    |> Cloud.Parallel
+    |> Cloud.ParallelBalanced
     |> cluster.CreateProcess
 
 // Show the progress
 csharpMathJob.ShowInfo()
 
 
-// Await the result, we expect ~100.0
+// Await the result, we expect an array of numbers very close to 1.0
 let csharpMathResults = csharpMathJob.Result
 
 
@@ -97,12 +103,13 @@ firstNativeJob.Result
 (** Now run a much larger job: 1000 250x250 matrices, inverted using Intel MKL: *)
 let nativeMathJob = 
     [ for i in 1 .. 1000 -> 
-         cloud { 
+         local { 
             Control.UseNativeMKL()
+            Control.UseSingleThread()
             let m = Matrix<double>.Build.Random(250,250) 
             return (m * m.Inverse()).Determinant() 
          } ]
-    |> Cloud.Parallel
+    |> Cloud.ParallelBalanced
     |> cluster.CreateProcess
 
 // Check progress
@@ -126,5 +133,5 @@ C# code running on your cluster for one particular example.
 Continue with further samples to learn more about the MBrace programming model.  
 
 > Note, you can use the above techniques from both scripts and compiled projects. To see the components referenced 
-> by this script, see [MBrace.Thespian.fsx](MBrace.Thespian.html) or [MBrace.Azure.fsx](MBrace.Azure.html).
+> by this script, see [ThespianCluster.fsx](ThespianCluster.html) or [AzureCluster.fsx](AzureCluster.html).
  *)

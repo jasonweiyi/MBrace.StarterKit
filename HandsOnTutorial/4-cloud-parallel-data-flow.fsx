@@ -17,7 +17,9 @@ let cluster = Config.GetCluster()
 
 
 (**
-# Using Data Parallel Cloud Flows
+# Introduction to Data Parallel Cloud Flows
+
+> This tutorial is from the [MBrace Starter Kit](https://github.com/mbraceproject/MBrace.StarterKit).
 
 You now learn the CloudFlow programming model, for cloud-scheduled
 parallel data flow tasks.  This model is similar to Hadoop and Spark.
@@ -42,7 +44,7 @@ let streamComputationTask =
 (**
 Next, check the progress of your job.
 
-> Note: the number of cloud tasks involved, which should be the number of workers + 1.  This indicates
+> Note: the number of cloud tasks involved, which should be the number of workers * 2.  This indicates
 > the input array has been partitioned and the work carried out in a distributed way.
 *)
 streamComputationTask.ShowInfo()
@@ -95,9 +97,8 @@ performing recomputations of the original flow.
 let persistedCloudFlow =
     inputs
     |> CloudFlow.OfArray
-    |> CloudFlow.collect(fun i -> seq {for j in 1 .. 10000 -> (i, string j) })
-    |> CloudFlow.groupBy snd
-    |> CloudFlow.persist StorageLevel.MemoryAndDisk
+    |> CloudFlow.collect(fun i -> seq {for j in 1 .. 10000 -> (i+j, string j) })
+    |> CloudFlow.persist StorageLevel.Memory
     |> cluster.Run
 
 
@@ -113,5 +114,5 @@ Continue with further samples to learn more about the
 MBrace programming model. 
 
 > Note, you can use the above techniques from both scripts and compiled projects. To see the components referenced 
-> by this script, see [MBrace.Thespian.fsx](MBrace.Thespian.html) or [MBrace.Azure.fsx](MBrace.Azure.html).
+> by this script, see [ThespianCluster.fsx](ThespianCluster.html) or [AzureCluster.fsx](AzureCluster.html).
  *)

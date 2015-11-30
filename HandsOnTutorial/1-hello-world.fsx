@@ -8,9 +8,12 @@ open MBrace.Core
 open MBrace.Flow
 
 (**
+
 # Your First 'Hello World' Computation with MBrace
 
-A guide to creating a cluster is [here](http://www.m-brace.net/#try).
+> This tutorial is from the [MBrace Starter Kit](https://github.com/mbraceproject/MBrace.StarterKit).
+
+A guide to creating a cluster is [here](http://www.mbrace.io/#try).
 
 Start F# Interactive in your editor.  Highlight the text below and press "Alt-Enter" (Visual Studio) or the other
 appropriate execution command for your editor. This connects to the cluster.  If you are using a locally simulated
@@ -77,5 +80,6 @@ cluster.ClearAllProcesses()
 (**
 
 > Note, you can use the above techniques from both scripts and compiled projects. To see the components referenced 
-> by this script, see [MBrace.Thespian.fsx](MBrace.Thespian.html) or [MBrace.Azure.fsx](MBrace.Azure.html).
+> by this script, see [ThespianCluster.fsx](ThespianCluster.html) or [AzureCluster.fsx](AzureCluster.html).
+
 **)

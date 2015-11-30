@@ -14,11 +14,13 @@ open MBrace.Flow
 let cluster = Config.GetCluster() 
 
 
-#load "lib/collections.fsx"
+#load "lib/utils.fsx"
 #load "lib/sieve.fsx"
 
 (**
-# Using MBrace.Azure for CPU-intensive work
+# Introduction to CPU-intensive Cloud Parallelism
+
+> This tutorial is from the [MBrace Starter Kit](https://github.com/mbraceproject/MBrace.StarterKit).
 
 In this tutorial you learn how to perform CPU-intensive cloud-parallel workload on your MBrace cluster.
 The work will be computing prime numbers, though you can easily replace this with any code
@@ -38,12 +40,12 @@ let locallyComputedPrimes =
     the multiple machines (workers) in the cluster. *)
 let clusterPrimesTask =
     [| for i in 1 .. 30 -> 
-         cloud { 
+         local { 
             let primes = Sieve.getPrimes 100000000
             return sprintf "calculated %d primes %A on machine '%s'" primes.Length primes Environment.MachineName 
          }
     |]
-    |> Cloud.Parallel
+    |> Cloud.ParallelBalanced
     |> cluster.CreateProcess
 
 
@@ -61,7 +63,7 @@ Alternatively, you could have started 30 independent jobs.  This can be handy if
 *)
 
 let jobs =  
-    [ for i in 1 .. 30 -> 
+    [ for i in 1 .. 10 -> 
          cloud { 
             let primes = Sieve.getPrimes 100000000
             return sprintf "calculated %d primes %A on machine '%s'" primes.Length primes Environment.MachineName 
@@ -153,5 +155,5 @@ using MBrace.Azure. Continue with further samples to learn more about the
 MBrace programming model.  
 
 > Note, you can use the above techniques from both scripts and compiled projects. To see the components referenced 
-> by this script, see [MBrace.Thespian.fsx](MBrace.Thespian.html) or [MBrace.Azure.fsx](MBrace.Azure.html).
+> by this script, see [ThespianCluster.fsx](ThespianCluster.html) or [AzureCluster.fsx](AzureCluster.html).
 *)

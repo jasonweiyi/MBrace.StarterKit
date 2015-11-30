@@ -1,48 +1,76 @@
-﻿#I "../packages/MBrace.Azure/tools" 
+#I __SOURCE_DIRECTORY__
+#I "../packages/MBrace.Azure/tools" 
 #I "../packages/Streams/lib/net45" 
-#r "../packages/Streams/lib/net45/Streams.Core.dll"
+#r "../packages/Streams/lib/net45/Streams.dll"
 #I "../packages/MBrace.Flow/lib/net45" 
 #r "../packages/MBrace.Flow/lib/net45/MBrace.Flow.dll"
 #load "../packages/MBrace.Azure/MBrace.Azure.fsx"
+#load "../packages/MBrace.Azure.Management/MBrace.Azure.Management.fsx"
 
 namespace global
 
 module Config =
 
+    open System.IO
     open MBrace.Core
     open MBrace.Runtime
     open MBrace.Azure
+    open MBrace.Azure.Management
 
-    // Both of the connection strings can be found under "Cloud Service" --> "Configure" --> scroll down to "MBraceWorkerRole"
-    //
-    // The storage connection string is of the form  
-    //    DefaultEndpointsProtocol=https;AccountName=myAccount;AccountKey=myKey 
-    //
-    // The service bus connection string is of the form
-    //    Endpoint=sb://%s.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=%s
+    // This script is used to reconnect to your cluster.
 
-    let myStorageConnectionString = "your storage connection string here"
-    let myServiceBusConnectionString = "your service bus connection string here"
+    // You can download your publication settings file at 
+    //     https://manage.windowsazure.com/publishsettings
+    let pubSettingsFile = @"/Users/eirik/Desktop/eirik.publishsettings"
 
-    // Alternatively you can specify the connection strings by calling the functions below
-    //
-    // storageName: the one you specified when you created cluster.
-    // storageAccessKey: found under "Manage Access Keys" for that storage account in the Azure portal.
-    // serviceBusName: the one you specified when you created cluster.
-    // serviceBusKey: found under "Configure" for the service bus in the Azure portal
-    
-    // let createStorageConnectionString(storageName, storageAccessKey) = sprintf "DefaultEndpointsProtocol=https;AccountName=%s;AccountKey=%s" storageName storageAccessKey
-    // let createServiceBusConnectionString(serviceBusName, serviceBusKey) = sprintf "Endpoint=sb://%s.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=%s" serviceBusName serviceBusKey
+    // If your publication settings defines more than one subscription,
+    // you will need to specify which one you will be using here.
+    let subscriptionId : string option = Some "Nessos"
 
-    let config = Configuration(myStorageConnectionString, myServiceBusConnectionString)
+    // Your prefered Azure service name for the cluster.
+    // NB: must be a valid DNS prefix unique across Azure.
+    let clusterName = "eiriktests"
 
-    // It is possible to keep connection strings stored in the environment.
-    // 1. To set the environment variables:
-    // Configuration.EnvironmentStorageConnectionString <- "your storage connection string here"
-    // Configuration.EnvironmentServiceBusConnectionString <- "your service bus connection string here"
-    //
-    // 2. To recover the environment variables
-    // let config = Configuration.FromEnvironmentVariables()
+    // Your prefered Azure region. Assign this to a data center close to your location.
+    let region = Region.North_Europe
+    // Your prefered VM size
+    let vmSize = VMSize.Large
+    // Your prefered cluster count
+    let vmCount = 4
 
-    let GetCluster() =
-        AzureCluster.Connect(config, logger = ConsoleLogger(true), logLevel = LogLevel.Info)
+    // set to true if you would like to provision
+    // the custom cloud service bundled with the StarterKit
+    // In order to use this feature, you will need to open
+    // the `CustomCloudService` solution under the `azure` folder 
+    // inside the MBrace.StarterKit repo.
+    // Right click on the cloud service item and hit "Package.."
+    let useCustomCloudService = false
+    let private tryGetCustomCsPkg () =
+        if useCustomCloudService then
+            let path = __SOURCE_DIRECTORY__ + "/../azure/CustomCloudService/bin/app.publish/MBrace.Azure.CloudService.cspkg" |> Path.GetFullPath
+            if not <| File.Exists path then failwith "Find the 'MBrace.Azure.CloudService' project under 'azure\CustomCloudService' and hit 'Package...'."
+            Some path
+        else
+            None
+
+    /// Gets the already existing deployment
+    let GetDeployment() = Deployment.GetDeployment(pubSettingsFile, serviceName = clusterName, ?subscriptionId = subscriptionId) 
+
+    /// Provisions a new cluster to Azure with supplied parameters
+    let ProvisionCluster() = 
+        Deployment.Provision(pubSettingsFile, region, vmCount, vmSize, serviceName = clusterName, ?subscriptionId = subscriptionId, ?cloudServicePackage = tryGetCustomCsPkg())
+
+    /// Resizes the cluster using an updated VM count
+    let ResizeCluster(newVmCount : int) =
+        let deployment = GetDeployment()
+        deployment.Resize(newVmCount)
+
+    /// Deletes an existing cluster deployment
+    let DeleteCluster() =
+        let deployment = GetDeployment()
+        deployment.Delete()
+
+    /// Connect to the cluster 
+    let GetCluster() = 
+        let deployment = GetDeployment()
+        AzureCluster.Connect(deployment, logger = ConsoleLogger(true), logLevel = LogLevel.Info)
